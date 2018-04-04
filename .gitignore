@@ -2,3 +2,4 @@
 /.idea
 /.gitignore
 /addons/cms/application/.DS_Store
+/addons/cms/assets/*.DS_Store

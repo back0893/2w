@@ -34,7 +34,7 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefin
                                 return '<a href="' + value + '" target="_blank" class="btn btn-default btn-xs"><i class="fa fa-link"></i></a>';
                             }},
                         {field: 'items', title: __('Items')},
-                        {field: 'weigh', title: __('Weigh'), visible: false},
+                        {field: 'weigh', title: __('Weigh')},
                         {field: 'createtime', title: __('Createtime'), visible: false, operate: 'RANGE', addclass: 'datetimerange', formatter: Table.api.formatter.datetime},
                         {field: 'updatetime', title: __('Updatetime'), visible: false, operate: 'RANGE', addclass: 'datetimerange', formatter: Table.api.formatter.datetime},
                         {field: 'status', title: __('Status'), formatter: Table.api.formatter.status},
@@ -86,13 +86,21 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefin
                     var data = $("option:selected", this).data();
                     var type = $("input[name='row[type]']:checked").val();
                     if (type == 'channel') {
-                        $("input[name='row[channeltpl]']").val(data.channeltpl);
+                        var tpl=$("input[name='row[channeltpl]']");
+                        if(tpl.val().length==0){
+                            $("input[name='row[channeltpl]']").val(data.channeltpl);
+                        }
                     } else if (type == 'list') {
-                        $("input[name='row[listtpl]']").val(data.listtpl);
-                        $("input[name='row[showtpl]']").val(data.showtpl);
+                        var tpl1=$("input[name='row[listtpl]']");
+                        var tpl2=$("input[name='row[showtpl]']");
+                        if(tpl1.val().length==0){
+                            tpl1.val(data.listtpl);
+                        }
+                        if(tpl2.val().length==0) {
+                            tpl2.val(data.showtpl);
+                        }
                     }
                 });
-
             }
         }
     };

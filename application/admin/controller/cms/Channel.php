@@ -120,5 +120,8 @@ class Channel extends Backend
             $this->success();
         }
     }
-
+//    public function edit($ids=null){
+//        $row = $this->model->get($ids);
+//        var_dump($row->channeltpl);
+//    }
 }

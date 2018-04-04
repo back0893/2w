@@ -1,0 +1,44 @@
+<div class="header-body">
+    <!--logo S-->
+    <div class="logo"><a class="navbar-brand" href="{cms:config name='cms.indexurl'/}"><img src="__ADDON__/img/logo.png" width="180" alt=""></a></div>
+    <!--logo E-->
+    <div class="nav">
+        {cms:channellist id="nav" type="top"}
+        <div class="nav-li">
+            <div class="nav-top">
+                {$nav.name}
+            </div>
+            <div class="nav-hide">
+                <div class="img">
+                    <img src="{$nav.image}">
+                    <p><a href="{$nav.url}">{$nav.name}</a></p>
+                </div>
+                <ul class="text" >
+                    {cms:channellist id="sub" type="son" typeid="$nav['id']"}
+                    <li><a href="{$sub.url}">{$sub.name}</a></li>
+                    {/cms:channellist}
+                </ul>
+            </div>
+        </div>
+        {/cms:channellist}
+        <div class="search">
+            <i class="iconfont">&#xe618;</i>
+            <div class="search-hide">
+                <input type="text" placeholder="search" />
+                <b class="iconfont">&#xe618;</b>
+            </div>
+        </div>
+        <div class="user">
+            <div class="show iconfont">&#xe74a;</div>
+            <!-- 登录后显示 -->
+            <div class="hide
+    ">
+                <ul>
+                    <li>我的慧道</li>
+                    <li>通知</li>
+                    <li>退出登录</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

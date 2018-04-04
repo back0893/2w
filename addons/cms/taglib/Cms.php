@@ -32,7 +32,6 @@ class Cms extends TagLib
         'pageinfo'    => ['attr' => 'type', 'close' => 0],
         'commentinfo' => ['attr' => 'type', 'close' => 0],
     ];
-
     public function tagBreadcrumb($tag, $content)
     {
         $id = isset($tag['id']) ? $tag['id'] : 0;

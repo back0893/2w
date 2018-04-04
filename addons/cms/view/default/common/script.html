@@ -1,0 +1,6 @@
+<script src="__ADDON__/js/particles.min.js"></script>
+<script src="__ADDON__/js/app.js"></script>
+<!--这里加载自定义的脚本-->
+<?php $srcpits=empty($srcpits)?[]:$srcpits;foreach($srcpits as $script):?>
+<script src="__ADDON__/js/<?=$script?>"></script>
+<?php endforeach;?>

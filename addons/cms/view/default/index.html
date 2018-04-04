@@ -1,0 +1,262 @@
+{layout name="common/layout" /}
+
+<div class="header">
+    <div class="header-body">
+        <!--logo S-->
+        <div class="logo"><a class="navbar-brand" href="{cms:config name='cms.indexurl'/}"><img src="__ADDON__/img/logo.png" width="180" alt=""></a></div>
+        <!--logo E-->
+        <div class="nav">
+            {cms:channellist id="nav" type="top"}
+            <div class="nav-li">
+                <div class="nav-top">
+                   {$nav.name}
+                </div>
+                <div class="nav-hide">
+                    <div class="img">
+                        <img src="{$nav.image}">
+                        <p><a href="{$nav.url}">{$nav.name}</a></p>
+                    </div>
+                    <ul class="text" >
+                        {cms:channellist id="sub" type="son" typeid="$nav['id']"}
+                        <li><a href="{$sub.url}">{$sub.name}</a></li>
+                        {/cms:channellist}
+                    </ul>
+                </div>
+            </div>
+            {/cms:channellist}
+            <div class="search">
+                <i class="iconfont">&#xe618;</i>
+                <div class="search-hide">
+                    <input type="text" placeholder="search" />
+                    <b class="iconfont">&#xe618;</b>
+                </div>
+            </div>
+            <div class="user">
+                <div class="show iconfont">&#xe74a;</div>
+                <!-- 登录后显示 -->
+                <div class="hide
+">
+                    <ul>
+                        <li>我的慧道</li>
+                        <li>通知</li>
+                        <li>退出登录</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="topkong"></div>
+<div class="banner">
+    <div class="swiper-container swiper-index">
+        <div class="swiper-wrapper">
+            {cms:blocklist id='banner' condition=' type=\"banner\"' }
+            <div class="swiper-slide">
+                <img src="{$banner.image}" alt="">
+                <div class="contain">
+                    <div class="swiper-no-swiping txt txt-w">
+                        {$banner.content}
+                    </div>
+                </div>
+            </div>
+            {/cms:blocklist}
+        </div>
+        <!-- 圆点 -->
+        <div class="swiper-pagination"></div>
+        <!-- 上一页 -->
+        <div class="swiper-button-prev"></div>
+        <!-- 下一页 -->
+        <div class="swiper-button-next"></div>
+        <p></p>
+    </div>
+</div>
+<div class="ctr">
+    <div class="tit">本周活动</div>
+    <div class="list_a ctr_li">
+        <div class="cor_d_3 cor_a_1 cor_c_2">
+            <div class="list_li">
+                <img src="images/card.png" alt="" />
+                <div class="txt">
+                    <h5>CIO 挑战之高度监管环境下的数据集成</h5>
+                    <p>数据经常被比作一种新的“自然资源”， 维护客户隐私，确保企业遵守相关法规，并获取数据驱动洞察力，将是 IT 部门未来的主要任务之一。 75% 的 企业将会在未来一年内面临数据隐私法律合规性挑战。</p>
+                    <p>挑战之高度监管环境下的数据集成</p>
+                </div>
+            </div>
+        </div>
+        <div class="cor_d_3 cor_a_1 cor_c_2">
+            <div class="list_li">
+                <img src="images/card.png" alt="" />
+                <div class="txt">
+                    <h5>CIO 挑战之高度监管环境下的数据集成</h5>
+                    <p>数据经常被比作一种新的“自然资源”， 维护客户隐私，确保企业遵守相关法规，并获取数据驱动洞察力，将是 IT 部门未来的主要任务之一。 75% 的 企业将会在未来一年内面临数据隐私法律合规性挑战。</p>
+                    <p>挑战之高度监管环境下的数据集成</p>
+                </div>
+            </div>
+        </div>
+        <div class="cor_d_3 cor_a_1 cor_c_2">
+            <div class="list_li">
+                <img src="images/card.png" alt="" />
+                <div class="txt">
+                    <h5>CIO 挑战之高度监管环境下的数据集成</h5>
+                    <p>数据经常被比作一种新的“自然资源”， 维护客户隐私，确保企业遵守相关法规，并获取数据驱动洞察力，将是 IT 部门未来的主要任务之一。 75% 的 企业将会在未来一年内面临数据隐私法律合规性挑战。</p>
+                    <p>挑战之高度监管环境下的数据集成</p>
+                </div>
+            </div>
+        </div>
+        <div class="cor_d_3 cor_a_1 cor_c_2">
+            <div class="list_li">
+                <img src="images/card.png" alt="" />
+                <div class="txt">
+                    <h5>CIO 挑战之高度监管环境下的数据集成</h5>
+                    <p>数据经常被比作一种新的“自然资源”， 维护客户隐私，确保企业遵守相关法规，并获取数据驱动洞察力，将是 IT 部门未来的主要任务之一。 75% 的 企业将会在未来一年内面临数据隐私法律合规性挑战。</p>
+                    <p>挑战之高度监管环境下的数据集成</p>
+                </div>
+            </div>
+        </div>
+        <div class="cor_d_3 cor_a_1 cor_c_2">
+            <div class="list_li">
+                <img src="images/card.png" alt="" />
+                <div class="txt">
+                    <h5>CIO 挑战之高度监管环境下的数据集成</h5>
+                    <p>数据经常被比作一种新的“自然资源”， 维护客户隐私，确保企业遵守相关法规，并获取数据驱动洞察力，将是 IT 部门未来的主要任务之一。 75% 的 企业将会在未来一年内面临数据隐私法律合规性挑战。</p>
+                    <p>挑战之高度监管环境下的数据集成</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="particles-js" class="particles-js">
+    <div class="ctr">
+        <div class="tit2">本周活动</div>
+        <div class="list_a ctr_li">
+            <div class="cor_d_3 cor_a_1 cor_c_2">
+                <div class="list_li">
+                    <img src="images/card.png" alt="" />
+                    <div class="txt">
+                        <h5>CIO 挑战之高度监管环境下的数据集成</h5>
+                        <p>数据经常被比作一种新的“自然资源”， 维护客户隐私，确保企业遵守相关法规，并获取数据驱动洞察力，将是 IT 部门未来的主要任务之一。 75% 的 企业将会在未来一年内面临数据隐私法律合规性挑战。</p>
+                        <p>挑战之高度监管环境下的数据集成</p>
+                    </div>
+                </div>
+            </div>
+            <div class="cor_d_3 cor_a_1 cor_c_2">
+                <div class="list_li">
+                    <img src="images/card.png" alt="" />
+                    <div class="txt">
+                        <h5>CIO 挑战之高度监管环境下的数据集成</h5>
+                        <p>数据经常被比作一种新的“自然资源”， 维护客户隐私，确保企业遵守相关法规，并获取数据驱动洞察力，将是 IT 部门未来的主要任务之一。 75% 的 企业将会在未来一年内面临数据隐私法律合规性挑战。</p>
+                        <p>挑战之高度监管环境下的数据集成</p>
+                    </div>
+                </div>
+            </div>
+            <div class="cor_d_3 cor_a_1 cor_c_2">
+                <div class="list_li">
+                    <img src="images/card.png" alt="" />
+                    <div class="txt">
+                        <h5>CIO 挑战之高度监管环境下的数据集成</h5>
+                        <p>数据经常被比作一种新的“自然资源”， 维护客户隐私，确保企业遵守相关法规，并获取数据驱动洞察力，将是 IT 部门未来的主要任务之一。 75% 的 企业将会在未来一年内面临数据隐私法律合规性挑战。</p>
+                        <p>挑战之高度监管环境下的数据集成</p>
+                    </div>
+                </div>
+            </div>
+            <div class="cor_d_3 cor_a_1 cor_c_2">
+                <div class="list_li">
+                    <img src="images/card.png" alt="" />
+                    <div class="txt">
+                        <h5>CIO 挑战之高度监管环境下的数据集成</h5>
+                        <p>数据经常被比作一种新的“自然资源”， 维护客户隐私，确保企业遵守相关法规，并获取数据驱动洞察力，将是 IT 部门未来的主要任务之一。 75% 的 企业将会在未来一年内面临数据隐私法律合规性挑战。</p>
+                        <p>挑战之高度监管环境下的数据集成</p>
+                    </div>
+                </div>
+            </div>
+            <div class="cor_d_3 cor_a_1 cor_c_2">
+                <div class="list_li">
+                    <img src="images/card.png" alt="" />
+                    <div class="txt">
+                        <h5>CIO 挑战之高度监管环境下的数据集成</h5>
+                        <p>数据经常被比作一种新的“自然资源”， 维护客户隐私，确保企业遵守相关法规，并获取数据驱动洞察力，将是 IT 部门未来的主要任务之一。 75% 的 企业将会在未来一年内面临数据隐私法律合规性挑战。</p>
+                        <p>挑战之高度监管环境下的数据集成</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="ban-ctrl ban-imgtxt">
+    <div class="tit3">企业文化</div>
+    <div class="swiper-container swiper-imgtxt">
+        <div class="swiper-wrapper">
+            {cms:arclist id='arc' channel='67'}
+            <div class="swiper-slide">
+                <div class="img">
+                    <img src="{$arc.image}" alt="">
+                </div>
+                <div class="txt">
+                    {$arc.title}
+                    {$arc.description}
+                </div>
+            </div>
+            {/cms:arclist}
+        </div>
+        <div class="ctrl">
+            <!-- 上一页 -->
+            <div class="swiper-button-prev"></div>
+            <!-- 圆点 -->
+            <div class="swiper-pagination"></div>
+            <!-- 下一页 -->
+            <div class="swiper-button-next"></div>
+        </div>
+    </div>
+</div>
+<div class="ban-ctrl ban-news">
+    <div class="tit3">新闻</div>
+    <div class="swiper-container swiper-news">
+        <div class="swiper-wrapper">
+            {cms:channellist id='channel' type='son' typeid='58'}
+            <div class="swiper-slide">
+                <div class="news_list">
+                    {cms:arclist id='arc' key='n' channel='$channel.id'}
+                    {eq name='$n' value='1'}
+                    <div class="mt">
+                        <div class="img"><img src="{$arc.image}" alt="" /></div>
+                        <div class="txt">
+                            <h5>{$arc.title}</h5>
+                            <p>{$arc.description}</p>
+                            <div class="date on pbr">
+                                <b>{:date('m-d',$arc.updatetime)}</b><i>{:date('Y',$arc.updatetime)}</i>
+                            </div>
+                        </div>
+                    </div>
+                    {else/}
+                    <div class="list-tit">
+                        <div class="list-tit-li">
+                            <div class="date">
+                                <b>{:date('m-d',$arc.updatetime)}</b><i>{:date('Y',$arc.updatetime)}</i>
+                            </div>
+                            <div class="r">
+                                <a href="{$arc.url}">
+                                    <h6>{$arc.title}</h6>
+                                    <p>{$arc.description}</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    {/eq}
+                    {/cms:arclist}
+                </div>
+            </div>
+            {/cms:channellist}
+        </div>
+        <div class="ctrl">
+            <!-- 上一页 -->
+            <div class="swiper-button-prev"></div>
+            <!-- 圆点 -->
+            <div class="swiper-pagination"></div>
+            <!-- 下一页 -->
+            <div class="swiper-button-next"></div>
+        </div>
+    </div>
+</div>
+
+<!--这里加载自定义的脚本-->
+<?php $srcpits=['index.js']?>
